@@ -91,8 +91,12 @@ function resetGrid() {
         eraseCell.remove();
     })
     let x = document.querySelector('.resize').value;
+    if (x <= 0 || x >= 100 || x == NaN) {
+        alert('Please select a number between 1 and 99');
+    } else {
     createGrid(x);
     colorGrid();
+}
        
 }
 
